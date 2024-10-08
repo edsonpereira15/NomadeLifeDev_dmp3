@@ -1,0 +1,12 @@
+.register{
+    text-align: center;
+}
+
+.register p{
+    color: #aaa;
+}
+
+.register input{
+    border-color: #000;
+    border-radius: 1.5 rem;
+}
