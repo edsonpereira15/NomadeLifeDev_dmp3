@@ -1,24 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+import CreatePost from './pages/CreatePost/CreatePost'
+import Login from 'pages/Login/Login'
+import { useState } from 'react'
+import Home from 'pages/Home/Home'
+import Register from 'pages/Register/Register'
+import {BrowserRouter, Routes, Route, Navigate} from 'react-route-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <NavBar/>
-      <Footer/>
+      <BrowserRouter>
+         
+      <div className='container'> 
+        <Routes>
+
+        <Route path = '/' element = {<Home/>} />
+          <Route path = '/login' element = {<Login/>} />
+          <Route path = '/register' element = {<Register/>} />
+          
+        </Routes>
+      </div>
+          <NavBar/>
+          <Footer/>
+      </BrowserRouter>
+      
     </>
   )
-
 }
-
-import {useState} from react
-import  './App.css'
-import  './components/NavBar'
-import  './components/Footer'
-import CreatePost from '.pages/CreatePost/CreatePost'
 
 export default App
