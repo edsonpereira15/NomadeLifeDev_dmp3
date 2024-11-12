@@ -37,7 +37,7 @@ export const useInsertDocument = (docCollection) => {
             const newDocument = { ...document, createdAt: Timestamp.now() }
  
             const insertDocument = await addDoc(
-                collection(db, docCollection),
+                collection(docCollection, db),
                 newDocument
             )
  
